@@ -12,10 +12,10 @@
 # include functions to get/set matrix and get/set its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
-  m <- NULL
+  i <- NULL
   set <- function(y) {
     x <<- y     # set/reset the the matix of interest
-    m <<- NULL  #if matrix is changed, NULL out the inverse so cacheSolve() will recompute it
+    i <<- NULL  #if matrix is changed, NULL out the inverse so cacheSolve() will recompute it
   }
   get <- function() x
   setInverse <- function(inverse) i <<- inverse
